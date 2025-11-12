@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.api.v1.api import api_router
 
 app = FastAPI(
     title="Movie Rating System API",
@@ -11,5 +12,4 @@ app = FastAPI(
 def read_root():
     return {"message": "Welcome to Movie Rating API"}
 
-# We will add our API router here later
-# ...
+app.include_router(api_router, prefix="/api/v1")
