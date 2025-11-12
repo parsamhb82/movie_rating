@@ -1,2 +1,7 @@
 *.env
 movie_env/*
+*.db
+movie.db
+__pychache__
+*.__pychache__
+*.pyc
